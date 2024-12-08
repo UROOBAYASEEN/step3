@@ -17,7 +17,7 @@ const Review = ({name,image,possition,description}:{name:string,image:any,possit
             <div className='mt-10'>
           <h1 className='font-bold uppercase text-2xl'>{name}</h1>
           <p>{possition}</p>
-          <p>{description}</p>
+          <p className='w-[90%]'>{description}</p>
 
         </div>
         </div>

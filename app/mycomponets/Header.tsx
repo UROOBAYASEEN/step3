@@ -3,22 +3,24 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { CiSearch } from 'react-icons/ci'
-import { FaBell, FaExchangeAlt, FaHeart } from 'react-icons/fa'
+import { FaBell, FaExchangeAlt, FaFileInvoiceDollar, FaHeart } from 'react-icons/fa'
 import { IoSettingsSharp } from 'react-icons/io5'
 
 const Header = () => {
   return (
-    <div className='flex justify-between mx-5'>
+    <div className=' flex justify-between mx-5'>
       <div className='flex justify-between relative gap-10'>
         
         
+       
        <Link href="/"> <h1 className='text-2xl font-bold text-blue-700 text-center mt-4'>Mornet</h1></Link>
+        <div className=' hidden lg:inline'>
         <input type='text' placeholder='search some thing here' className='w-[400px] text-center border border-gray-300  p rounded-lg my-5'></input>
         <CiSearch className='text-2xl absolute left-[135px] top-5' />
-        <Link href="/Payment">   <FaExchangeAlt  className='text-2xl absolute left-[450px] top-5' /></Link>
+        <Link href="/Payment">   <FaExchangeAlt  className='text-2xl absolute left-[450px] top-5' /></Link></div>
 
       </div>
-      <div className='flex gap-3'>
+      <div className='flex gap-2'>
       
       <div className='rounded-full border border-gray-200 px-3 py-1 '>
       <FaHeart className='text-2xl mt-4' />
@@ -27,10 +29,11 @@ const Header = () => {
       <div className='rounded-full border border-gray-200 px-3 '>
       <FaBell className='text-2xl mt-4' />
       </div>
-     
+    
+    
      
       <div className='rounded-full border border-gray-200 px-3 '>
-     <Link href="/Payment"> <IoSettingsSharp className='text-2xl mt-4' /></Link>
+     <Link href="/Payment"> <FaFileInvoiceDollar className='text-2xl mt-4' /></Link>
       </div>
      
      

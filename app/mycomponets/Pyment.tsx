@@ -9,9 +9,9 @@ import { FaStar } from 'react-icons/fa'
 
 const Pyment = () => {
   return (
-    <div className='flex  bg-white py-5 rounded-lg'>
-        <div className='billdiv w-[852px]  '>
-            <div className='firstportion  m-5 p-5'>
+    <div className=' md:flex gap-7 bg-gray-300 py-5 rounded-lg overflow-x-hidden'>
+        <div className='billdiv bg-white rounded-2xl py-10 '>
+            <div className='firstportion  m-5 '>
                 <div className='flex justify-between'>
                     <div>
                         <h1 className='text-2xl font-bold'>Biling Info</h1>
@@ -19,7 +19,7 @@ const Pyment = () => {
                     </div>
                     <div> Step 1 to4</div>
                 </div>
-                <div className='grid grid-cols-2 gap-5'>
+                <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
                     <div>
                         <h1 className='mt-5 font-bold'>NAME</h1>
                         <input type='text' placeholder='Enter Name' className='text-center bg-gray-200 text-gray-300 w-[360px] mt-5 h-[50px]'></input>
@@ -37,7 +37,7 @@ const Pyment = () => {
                     </div>
                 </div>
             </div>
-            <div className='secondportion m-5 p-5'>
+            <div className='secondportion m-5 '>
                 <div className='flex justify-between'>
                     <div>
                         <h1 className='font-bold mt-5 text-2xl'>Rental Into</h1>
@@ -49,7 +49,7 @@ const Pyment = () => {
                     <span className='bg-blue-600 h-4 w-4 rounded-full'></span>
                     <span className='text-2xl font-bold'>Pick-up</span>
                 </div>
-                <div className='grid grid-cols-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div>
                         <h1 className='mt-5 font-bold'>Location</h1>
                         <input type='text' placeholder='select your city' className='text-center bg-gray-200 text-gray-300 w-[360px] mt-5 h-[50px]'></input>
@@ -65,7 +65,7 @@ const Pyment = () => {
                     <span className='bg-blue-600 h-4 w-4 rounded-full'></span>
                     <span className='text-2xl font-bold'>Drop-OF</span>
                 </div>
-                <div className='grid grid-cols-2'>
+                <div className='grid grid-cols-1'>
                 <div>
                         <h1 className='mt-5 font-bold'>Location</h1>
                         <input type='text' placeholder='select your city' className='text-center bg-gray-200 text-gray-300 w-[360px] mt-5 h-[50px]'></input>
@@ -81,7 +81,7 @@ const Pyment = () => {
             <div className='thirdportion p-5 m-5'>
             <div className='flex justify-between'>
                     <div>
-                        <h1 className='text-2xl font-bold'>PYMENT METHOD</h1>
+                        <h1 className='text-2xl font-bold'>PAYMENT METHOD</h1>
                         <p className='text-gray-300'>Please Enter your pyment methods</p>
                     </div>
                     <div> Step 3 to4</div>
@@ -103,7 +103,7 @@ const Pyment = () => {
 
                 </div>
                 </div>
-                <div className='grid grid-cols-2'>
+                <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div>
                         <h1 className='mt-5 font-bold'>Card Number</h1>
                         <input type='text' placeholder='Card number' className='text-center bg-gray-200 text-gray-300 w-[360px] mt-5 h-[50px]'></input>
@@ -178,10 +178,10 @@ const Pyment = () => {
             </div>
 
         </div>
-        <div className='w-[492px] py-3 bg-white'>
+        <div className='w-[492px]  px-5 bg-white  rounded-2xl py-10'>
             <h1 className='font-bold'>Rental summary</h1>
             <p className='text-gray-200 mt-3'> Price may chnage depend on the length of rental and price of the rental car </p>
-       <div className='flex gap-4 mb-5'>
+       <div className='md:flex gap-4 mb-5'>
        
        <div className='mt-10 bg-blue-600 px-6 py-6'>
        <Image

@@ -3,6 +3,7 @@ import React from 'react'
 import Headerone from './mycomponets/Headerone'
 import Popolarcar from './mycomponets/Popolarcar'
 import RecomdeCar from './mycomponets/RecomdeCar'
+import SideBar from './mycomponets/SideBar'
 
 const page = () => {
   return (
@@ -10,6 +11,7 @@ const page = () => {
      
      
       < Headerone/>
+      <SideBar/>
       <Popolarcar/>
       <RecomdeCar/>
      

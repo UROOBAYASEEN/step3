@@ -42,10 +42,10 @@ const Popolarcar = () => {
         </div>
 
 
-    <div className='mx-5 grid grid-cols-4'>
+    <div className=' grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4'>
 
 {imageData.map((val,ind)=>
-<div key={ind}>
+<div key={ind} className='ml-5'>
 <Products {...val}/>
 </div>
 

@@ -28,9 +28,9 @@ const ProductDetails = () => {
     ]
   return (
     <div className='mx-5 my-5'>
-        <div className='flex  gap-5 justify-end '>
-            <div>
-            <div className='bg-blue-700 h-[300px] w-[500px]  relative rounded-md'>
+        <div className='  gap-5 justify-end md:flex'>
+            <div className='border border-black'>
+            <div className='bg-blue-700 h-[300px] w-[500px]   relative rounded-md'>
                
                <Image
                src={car1}
@@ -76,8 +76,8 @@ const ProductDetails = () => {
 
             </div>
             </div>
-            <div className='bg-white border border-blue-700 px-5 py-5'>
-                <div className='flex justify-between  mx-5'>
+            <div className='bg-white border border-blue-700 px-5 py-5 mt-10 md:mt-1'>
+                <div className='flex justify-between  mx-5 '>
                     <h1 className='text-2xl font-bold'>NISHAAN G-T-R</h1>
                     <p><FaHeart className='text-red-800' /></p>
                 </div>
@@ -89,11 +89,11 @@ const ProductDetails = () => {
                     <FaHeart   className='text-yellow-600' />
                     <p>440+ Reviews</p>
                 </div>
-                <p className='mx-5 mt-7 w-[50%]'>
+                <p className='mx-5 mt-7 w-[70%]'>
                 Discover your dream car’s features, performance, and design. Explore technology, safety, and efficiency for an informed decision.
 
                 </p>
-                <div className='flex justify-between mx-5 mt-10'>
+                <div className=' lg:flex justify-between mx-5 mt-10'>
                     <div>
                         <p>Type car</p>
                         <h1 className='mt-5'>Steering</h1>
@@ -111,7 +111,7 @@ const ProductDetails = () => {
                         <h1 className='mt-5'>70L</h1>
                     </div>
                 </div>
-                <div className='flex mx-5 mt-10 items-center text-center justify-between'>
+                <div className=' mx-5 mt-10 items-center text-center justify-between'>
                     <div className='flex'><span className='font-bold text-2xl'>$80.00/</span><span>days</span></div>
                     <div className='bg-blue-700 px-12 py-4 text-white font-bold'>Rent nOw</div>
                 </div>
