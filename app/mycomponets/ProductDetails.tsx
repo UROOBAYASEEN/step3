@@ -27,10 +27,10 @@ const ProductDetails = () => {
                 
     ]
   return (
-    <div className='mx-5 my-5'>
+    <div className=' my-5'>
         <div className='  gap-5 justify-end md:flex'>
             <div className='border border-black'>
-            <div className='bg-blue-700 h-[300px] w-[500px]   relative rounded-md'>
+            <div className='bg-blue-700 h-[300px]    relative rounded-md'>
                
                <Image
                src={car1}
@@ -89,7 +89,7 @@ const ProductDetails = () => {
                     <FaHeart   className='text-yellow-600' />
                     <p>440+ Reviews</p>
                 </div>
-                <p className='mx-5 mt-7 w-[70%]'>
+                <p className='mx-5 mt-7 w-[70%] z-20'>
                 Discover your dream car’s features, performance, and design. Explore technology, safety, and efficiency for an informed decision.
 
                 </p>
@@ -124,7 +124,7 @@ const ProductDetails = () => {
     <Review {...val}/>
     </div>
 )}
-<div className='text-blue-500 text-2xl flex justify-center text-center items-center mt-10 gap-3'>
+<div className='text-blue-500 text-2xl flex justify-center text-center items-center mt-10 gap-3 px-5'>
     
     <span className=''>Show All</span>
     <IoIosArrowDown className='text-2xl text-black' />

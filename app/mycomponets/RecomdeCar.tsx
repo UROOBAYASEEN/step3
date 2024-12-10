@@ -62,7 +62,7 @@ const RecomdeCar = () => {
     ]
   return (
     
-    <div className='mx-5 mt-10 bg-gray-200'>
+    <div className=' mt-10 bg-gray-200'>
         <div>
         <h1 className='ml-10 text-2xl'>Recommendation Car</h1>
     </div>

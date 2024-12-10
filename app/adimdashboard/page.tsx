@@ -73,8 +73,8 @@ const page = () => {
         }
     ]
   return (
-    <div className=' lg:flex gap-3 bg-gray-200  overflow-x-hidden'>
-        <div className=' firstdiv w-[286px]  p-10 text-gray-300 border rounded-2xl bg-white'>
+    <div className=' lg:flex gap-3 bg-gray-200  overflow-x-hidden '>
+        <div className=' firstdiv w-[286px]  p-10 text-gray-300 border rounded-2xl bg-white hidden lg:inline'>
             <h1 className='text-gray-400 text-2xl'>Main Menu</h1>
             {data.map((val,ind)=>
             <div key={ind} className={`flex gap-3 mt-10 text-2xl text-gray-400 hover:bg-blue-700 py-4 px-5 ${val.name=="Dashboard"&& "bg-blue-700"} `}><span>{val.icon}</span><span>{val.name}</span></div>
@@ -108,8 +108,8 @@ const page = () => {
                 </div>
 
             </div>
-            <div className=' gap-10 justify-end mx-5 mt-6  '>
-      <div className='w-[450px]  border border-gray-500 bg-white px-5 mb-10'>
+            <div className=' justify-end  mt-6  '>
+      <div className='px-2  border border-gray-500 bg-white  mb-10 md:px-5'>
         <div className='flex items-center gap-2 mt-5 ml-5'><span className='h-2 w-2 bg-blue-700 rounded-full'></span><span>Pick-Up</span></div>
         <div className='flex justify-center gap-3 mt-4'>
           <div>
@@ -131,9 +131,9 @@ const page = () => {
 
         </div>
       </div>
-      <div className='w-[450px]  border border-gray-500'>
+      <div className='  border border-gray-500'>
 
-      <div className='  border  bg-white px-5'>
+      <div className='  border  bg-white px-2 md:px-5'>
         <div className='flex items-center gap-2 mt-5 ml-5'><span className='h-2 w-2 bg-blue-700 rounded-full'></span><span>Drop-OF</span></div>
         <div className='flex justify-center gap-3 mt-4'>
           <div>

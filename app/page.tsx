@@ -7,7 +7,7 @@ import SideBar from './mycomponets/SideBar'
 
 const page = () => {
   return (
-    <div className='bg-gray-300  overflow-x-hidden'>
+    <div className='bg-gray-200 overflow-x-hidden'>
      
      
       < Headerone/>

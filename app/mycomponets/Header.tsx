@@ -13,7 +13,7 @@ import SideBar from './SideBar'
 const Header = () => {
   const [hamburguer, sethamburguer] = useState(false)
   return (
-    <div className=' flex justify-between mx-5'>
+    <div className=' flex justify-between mx-2'>
       <div className='flex justify-between relative gap-10'>
         
         
@@ -33,8 +33,9 @@ const Header = () => {
       </div>
       <div className='flex gap-2'>
       
-      <div className='rounded-full border border-gray-200 px-3 py-1 '>
-      <FaHeart className='text-2xl mt-4' />
+      <div className='rounded-full border border-gray-200  py-1 px-3 hidden md:flex'>
+      <FaHeart className='text-2xl mt-4 
+      ' />
       </div>
       
       <div className='rounded-full border border-gray-200 px-3 '>

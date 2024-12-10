@@ -10,7 +10,7 @@ import { MdFiberManualRecord } from 'react-icons/md'
 const Products = ({name,image,rent,lenght,purpose}:{name:string,image:any,rent:string,lenght:string,purpose:string}) => {
 const [white, setwhite] = useState(" text-gray-200 ")
   return (
-    <div className='   mt-10 border bg-white py-5 px-5 w-[300px] rounded-xl'>
+    <div className='   mt-10 border bg-white py-5 px-5  w-[300px] rounded-xl'>
         
         <div className='flex justify-between items-center text-center ' >
             <h1 className='font-bold text-2xl'>{name}</h1>

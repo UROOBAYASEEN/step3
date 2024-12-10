@@ -5,8 +5,8 @@ import { FaStar } from 'react-icons/fa'
 const Review = ({name,image,possition,description}:{name:string,image:any,possition:string,description:string}) => {
   return (
     <div>
-      <div className='flex justify-between gap-5 item-center items-start mt-10'>
-        <div className='flex justify-center item-center items-start gap-5'>
+      <div className='md:flex justify-between gap-3 item-center items-start mt-10'>
+        <div className='flex justify-center item-center items-start gap-5 px-5'>
           <Image
           src={image}
           alt='thisisiamge'
@@ -17,7 +17,7 @@ const Review = ({name,image,possition,description}:{name:string,image:any,possit
             <div className='mt-10'>
           <h1 className='font-bold uppercase text-2xl'>{name}</h1>
           <p>{possition}</p>
-          <p className='w-[90%]'>{description}</p>
+          <p className='lg:w-[50%] w-[-10px] mt-5'>{description}</p>
 
         </div>
         </div>
