@@ -76,12 +76,12 @@ const page = () => {
     <div className=' lg:flex gap-3 bg-gray-200  overflow-x-hidden'>
         <div className=' firstdiv w-[286px]  p-10 text-gray-300 border rounded-2xl bg-white'>
             <h1 className='text-gray-400 text-2xl'>Main Menu</h1>
-            {data.map((val)=>
-            <div className={`flex gap-3 mt-10 text-2xl text-gray-400 hover:bg-blue-700 py-4 px-5 ${val.name=="Dashboard"&& "bg-blue-700"} `}><span>{val.icon}</span><span>{val.name}</span></div>
+            {data.map((val,ind)=>
+            <div key={ind} className={`flex gap-3 mt-10 text-2xl text-gray-400 hover:bg-blue-700 py-4 px-5 ${val.name=="Dashboard"&& "bg-blue-700"} `}><span>{val.icon}</span><span>{val.name}</span></div>
             )}
               <h1 className='text-gray-400 text-2xl mt-10'>Preferance</h1>
-            {nextdata.map((val)=>
-            <div className={`flex gap-3 mt-10 text-2xl text-gray-400 hover:bg-blue-700 py-4 px-5 ${val.name=="Dashboard"&& "bg-blue-700"} `}><span>{val.icon}</span><span>{val.name}</span></div>
+            {nextdata.map((val,ind)=>
+            <div  key={ind} className={`flex gap-3 mt-10 text-2xl text-gray-400 hover:bg-blue-700 py-4 px-5 ${val.name=="Dashboard"&& "bg-blue-700"} `}><span>{val.icon}</span><span>{val.name}</span></div>
             )}
         </div>
         <div className='secondiv border  bg-white pt-10 rounded-2xl'> 
@@ -186,9 +186,9 @@ const page = () => {
                 </div>
                 <div className='   text-center  py-10 px-10'>
                     {
-                        admindata.map((val:any)=>
+                        admindata.map((val:any,ind)=>
                         
-                        <div className='flex justify-between items-center text-center mt-5
+                        <div key={val} className='flex justify-between items-center text-center mt-5
                         '>
                             <div className='flex gap-2'>
                             <FaDotCircle />

@@ -40,7 +40,7 @@ const Headerone = () => {
     </div>
     </div>
     <div className=' gap-10 justify-end mx-5 mt-6  md:flex'>
-      <div className='w-[450px]  border border-gray-500 bg-white px-5 mb-10'>
+      <div className='w-[450px]  border border-gray-500 bg-white px-5 '>
         <div className='flex items-center gap-2 mt-5 ml-5'><span className='h-2 w-2 bg-blue-700 rounded-full'></span><span>Pick-Up</span></div>
         <div className='flex justify-center gap-3 mt-4'>
           <div>

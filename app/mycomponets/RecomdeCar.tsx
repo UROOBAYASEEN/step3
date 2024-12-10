@@ -8,6 +8,7 @@ import car9 from '../../public/Car (9).png'
 import car10 from '../../public/Car (10).png'
 import car11 from '../../public/Car (11).png'
 import Products from './Products'
+import Link from 'next/link'
 const RecomdeCar = () => {
     const data=[
          { name:"All New Rusia",
@@ -74,7 +75,7 @@ const RecomdeCar = () => {
         )}
     </div>
     <div className="flex justify-center items-center text-center">
-        <p className='bg-blue-700 text-white font-bold px-10 py-3  rounded-md mt-10 mb-10'>Show More Car</p>
+<Link href="/Car"><p className='bg-blue-700 text-white font-bold px-10 py-3  rounded-md mt-10 mb-10'>Show More Car</p></Link>
 
     </div>
     </div> 
