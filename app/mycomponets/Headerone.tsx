@@ -39,8 +39,8 @@ const Headerone = () => {
         <button className='bg-blue-800 text-white px-9 py-3 mt-5 ml-5 rounded-md'>Rental Car</button>
     </div>
     </div>
-    <div className=' gap-2 justify-end  mt-6  md:flex '>
-      <div className='w-[400px]  border border-gray-500 bg-white px-5 py-3'>
+    <div className=' gap-2 justify-between mx-5  mt-6  md:flex '>
+      <div className='  border border-gray-500 bg-white px-5 py-3'>
         <div className='flex items-center gap-2 mt-5 ml-5'><span className='h-2 w-2 bg-blue-700 rounded-full'></span><span>Pick-Up</span></div>
         <div className='flex justify-center gap-1 mt-4'>
           <div>
@@ -62,7 +62,7 @@ const Headerone = () => {
 
         </div>
       </div>
-      <div className='w-[400px]  border border-black bg-white py-3'>
+      <div className='  border border-black bg-white py-3'>
 
       <div className='    bg-white px-5'>
         <div className='flex items-center gap-2 mt-5 ml-5'><span className='h-2 w-2 bg-blue-700 rounded-full'></span><span>Drop-OF</span></div>

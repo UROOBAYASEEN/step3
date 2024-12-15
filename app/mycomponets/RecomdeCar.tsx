@@ -35,7 +35,7 @@ const RecomdeCar = () => {
             lenght:"80",
             purpose:"SUV"
         },
-        { name:"MG ZX EXCLUSIVE",
+        { name:"MG ZX",
             image:car8,
             rent:'$76',
             lenght:"70",
@@ -45,7 +45,7 @@ const RecomdeCar = () => {
             image:car9,
             rent:'$80',
             lenght:"80",
-            purpose:""
+            purpose:"Hatchback"
         },
         { name:"MG ZX EXCITE",
             image:car10,
@@ -62,11 +62,11 @@ const RecomdeCar = () => {
     ]
   return (
     
-    <div className=' mt-10 bg-gray-200'>
+    <div className=' mt-10 bg-gray-100 overflow-x-hidden'>
         <div>
-        <h1 className='ml-10 text-2xl'>Recommendation Car</h1>
+        <h1 className='ml-10 text-2xl mt-4'>Recommendation Car</h1>
     </div>
-    <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4'>
         {data.map((val,ind)=>
         <div key={ind} className='ml-5'>
         <Products {...val}/>

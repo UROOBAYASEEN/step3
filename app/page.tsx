@@ -11,7 +11,8 @@ const page = () => {
      
      
       < Headerone/>
-      <SideBar/>
+      
+      
       <Popolarcar/>
       <RecomdeCar/>
      

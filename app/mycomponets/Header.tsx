@@ -11,19 +11,28 @@ import SideBar from './SideBar'
 
 
 const Header = () => {
-  const [hamburguer, sethamburguer] = useState(false)
+  const [hamburguer, sethamburguer] = useState(true)
+
+  
   return (
     <div className=' flex justify-between mx-2'>
+      
       <div className='flex justify-between relative gap-10'>
         
         
-      <div className="md:hidden"onClick={()=>{
-        sethamburguer(!hamburguer)
-      }
-      } ><GiHamburgerMenu className="font-bold text-3xl mt-5 " /></div>
+      <div className="md:hidden" onClick={
+        ()=>{
+          sethamburguer(!hamburguer)
+        }
+      }><GiHamburgerMenu className="font-bold text-3xl mt-5 " /></div>
       {
-        hamburguer &&  <SideBar/>
+        hamburguer &&  <div className='fixed top-10'>
+          <div className='z-[100%]'></div>
+
+          </div>
       }
+     
+     
        <Link href="/"> <h1 className='text-2xl font-bold text-blue-700 text-center mt-4'>Mornet</h1></Link>
         <div className=' hidden lg:inline'>
         <input type='text' placeholder='search some thing here' className='w-[400px] text-center border border-gray-300  p rounded-lg my-5'></input>

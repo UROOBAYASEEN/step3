@@ -2,10 +2,10 @@ import React from 'react'
 
 const SideBar = () => {
   return (
-    <div className=''>
-<div className='absolute w-[26%] top-[470px] left-0 bg-white h-[1900px]  mt-4 hidden lg:inline'>
-          <h1 className='ml-5 mt-5'>Type</h1>
-          <div className='flex justify-center gap-3 mt-5'>
+    <div className='bg-white pb-[800px]'>
+<div className='w-[26%]  left-0 bg-white h-[1900px]   hidden lg:inline'>
+          <h1 className='ml-5 mt-3 pt-10'>Type</h1>
+          <div className='flex justify-center gap-3 mt-3'>
             <input type='checkbox' ></input>
             <p >Spots (10)</p>
           </div>

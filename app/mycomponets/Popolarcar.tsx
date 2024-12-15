@@ -35,14 +35,14 @@ const Popolarcar = () => {
         },
     ]
   return (
-    <div className=' mt-5 bg-gray-100'>
+    <div className=' mt-5 bg-gray-100 overflow-x-hidden'>
         <div className='flex justify-between'>
         <h1 className='mt-10 mx-10 mb-5 text-2xl'>Popular Car</h1>
         <h1 className='mt-10 mx-10 mb-5 text-2xl'>View All</h1>
         </div>
 
 
-    <div className=' grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 '>
+    <div className=' grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-3 '>
 
 {imageData.map((val,ind)=>
 <div key={ind} className='ml-5'>
