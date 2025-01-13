@@ -8,43 +8,44 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 
 
 import SideBar from './SideBar'
+import { FaCartShopping } from 'react-icons/fa6'
 
 
 const Header = () => {
-  const [hamburguer, sethamburguer] = useState(true)
+  const [hamburguer, sethamburguer] = useState(false)
 
   
   return (
-    <div className=' flex justify-between mx-2'>
+    <div className=' flex justify-between mx-2 px-2'>
       
       <div className='flex justify-between relative gap-10'>
         
         
-      <div className="md:hidden" onClick={
-        ()=>{
-          sethamburguer(!hamburguer)
-        }
-      }><GiHamburgerMenu className="font-bold text-3xl mt-5 " /></div>
+      <div><GiHamburgerMenu className="font-bold text-3xl mt-5 " onClick={()=>{sethamburguer(!hamburguer)}} /></div>
       {
-        hamburguer &&  <div className='fixed top-10'>
-          <div className='z-[100%]'></div>
+        hamburguer &&  <div className='absolute top-14 w-[500px] bg-white h-[400px] z-10 '>
+          <div className=''>
+            <SideBar/>
+          </div>
 
           </div>
       }
      
      
        <Link href="/"> <h1 className='text-2xl font-bold text-blue-700 text-center mt-4'>Mornet</h1></Link>
-        <div className=' hidden lg:inline'>
-        <input type='text' placeholder='search some thing here' className='w-[400px] text-center border border-gray-300  p rounded-lg my-5'></input>
-        <CiSearch className='text-2xl absolute left-[135px] top-5' />
-        <Link href="/Payment">   <FaExchangeAlt  className='text-2xl absolute left-[450px] top-5' /></Link></div>
+        <div className=' hidden lg:inline absolute left-[300px]'>
+        <input type='text' placeholder='search some thing here' className='w-[400px]   text-center border border-gray-300  p rounded-lg my-5'></input>
+        <CiSearch className='text-2xl absolute  top-5' />
+        <Link href="/Payment">   <FaExchangeAlt  className='text-2xl absolute right-3 top-5' /></Link></div>
 
       </div>
       <div className='flex gap-2'>
       
-      <div className='rounded-full border border-gray-200  py-1 px-3 hidden md:flex'>
-      <FaHeart className='text-2xl mt-4 
-      ' />
+    
+     <div className='rounded-full border border-gray-200  py-1 px-3 md:flex'>
+     <Link href="/Addtocart">  <FaCartShopping className='text-2xl mt-4 
+      ' /></Link>
+
       </div>
       
       <div className='rounded-full border border-gray-200 px-3 '>

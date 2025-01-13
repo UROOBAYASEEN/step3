@@ -4,6 +4,7 @@ import car  from "../../public/BG.png"
 import Image from 'next/image'
 import image8 from '../../public/image 8.png'
 import { IoIosArrowDown } from 'react-icons/io'
+import { TbTransferVertical } from "react-icons/tb";
 
 const Headerone = () => {
   return<div className=' mt-10 bg-gray-200  overflow-x-hidden '>
@@ -23,6 +24,7 @@ const Headerone = () => {
         <p className='text-white ml-5 w-[60%] mt-4 text-[300]'>Ease of Doing a Car Rental Sefely and reliably.Of course at a low price</p>
         <button className='bg-blue-800 text-white px-9 py-3 mt-5 ml-5 rounded-md'>Rental Car</button>
     </div>
+    
     <div className=' two w-[640px] h-[360px] bg-blue-700 rounded-md  relative  hidden md:inline'>
       <div className='absolute  bottom-0 left-[200px] '>
         <Image
@@ -62,6 +64,7 @@ const Headerone = () => {
 
         </div>
       </div>
+      <div className='bg-blue-800 text-center mx-10  items-center h-[80px] overflow-hidden px-5 py-3 '><TbTransferVertical className='text-3xl font-bold'/></div>
       <div className='  border border-black bg-white py-3'>
 
       <div className='    bg-white px-5'>

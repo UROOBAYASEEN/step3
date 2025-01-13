@@ -2,8 +2,8 @@ import React from 'react'
 
 const SideBar = () => {
   return (
-    <div className='bg-white pb-[800px]'>
-<div className='w-[26%]  left-0 bg-white h-[1900px]   hidden lg:inline'>
+    <div className='bg-white pb-[800px] '>
+<div className='  left-0 bg-white py-10 '>
           <h1 className='ml-5 mt-3 pt-10'>Type</h1>
           <div className='flex justify-center gap-3 mt-3'>
             <input type='checkbox' ></input>

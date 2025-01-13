@@ -5,6 +5,7 @@ import Footer from "./mycomponets/Footer";
 
 
 import Header from "./mycomponets/Header";
+import { Toaster } from "sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <Header/>
+      <Toaster/>
         {children}
       
-      
+        
+        
+   
+   
         <Footer/>
       </body>
     </html>

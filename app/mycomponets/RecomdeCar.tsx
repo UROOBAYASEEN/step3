@@ -66,10 +66,10 @@ const RecomdeCar = () => {
         <div>
         <h1 className='ml-10 text-2xl mt-4'>Recommendation Car</h1>
     </div>
-    <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-4'>
+    <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-4'>
         {data.map((val,ind)=>
         <div key={ind} className='ml-5'>
-        <Products {...val}/>
+        {/* <Products {...val}/> */}
         </div>
         
         )}

@@ -1,20 +1,55 @@
-
-import React from 'react'
+"use client"
+import React, { useEffect, useState } from 'react'
 import Headerone from './mycomponets/Headerone'
 import Popolarcar from './mycomponets/Popolarcar'
 import RecomdeCar from './mycomponets/RecomdeCar'
 import SideBar from './mycomponets/SideBar'
+import { client } from '@/sanity/lib/client'
 
-const page = () => {
+async function getdata(){
+  const fetchdata=await client.fetch(`*[_type == 'car']  `)
+  return fetchdata
+}
+
+
+const page =async () => {
+  interface CarDatas {
+    carName: string; // Name of the car
+    purpose: string; // Purpose of the car
+    length: number; // Length of the car
+    price: string; // Rental price of the car
+    carImage: {
+        _type: "image";
+        asset: {
+          _type: "reference";
+          _ref: string; // Reference ID of the image asset
+        };
+      };
+    
+    carDescription: string; // Detailed description of the car
+    id: string; // Unique ID for the car
+  }
+  const [localdata, setlocaldata] = useState<CarDatas[]>([])
+  useEffect(()=>{
+
+    if(window!==undefined){
+   
+      
+      localStorage.setItem("carddata",JSON.stringify([]))
+    }
+  })
+  const sanitydata= await getdata()
   return (
     <div className='bg-gray-200 overflow-x-hidden'>
      
-     
+     <div>
+      
+     </div>
       < Headerone/>
       
       
       <Popolarcar/>
-      <RecomdeCar/>
+      {/* <RecomdeCar/> */}
      
      
       
