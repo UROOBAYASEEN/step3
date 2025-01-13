@@ -9,7 +9,7 @@ return data
     return mydata
 }
 
-const page = ({params}:{params:{cardetails:string}}) => {
+const Page = ({params}:{params:{cardetails:string}}) => {
   const dynamicnumber=params.cardetails
 
 
@@ -53,19 +53,15 @@ const page = ({params}:{params:{cardetails:string}}) => {
       console.log(filteringdata)
       setfilterdata(filteringdata)
     }
-
-
-
-    
   })
   return (
     <div>
     
     {filterdata && <div>
     {
-      filterdata.map((val)=>
+      filterdata.map((val,ind)=>
   
-        <ProductDetails {...val}/>
+        <ProductDetails {...val} key={ind}/>
       )
     }
       </div>}
@@ -73,4 +69,4 @@ const page = ({params}:{params:{cardetails:string}}) => {
   )
 }
 
-export default page
+export default Page

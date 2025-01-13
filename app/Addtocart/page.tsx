@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 import { MdDelete } from 'react-icons/md';
 import { toast } from 'sonner';
 
-const page = () => {
+const Page = () => {
  
   interface AddingData {
     carname: string;
@@ -112,4 +112,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

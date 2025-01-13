@@ -12,7 +12,7 @@ async function getdata(){
 }
 
 
-const page =async () => {
+const Page =async () => {
   interface CarDatas {
     carName: string; // Name of the car
     purpose: string; // Purpose of the car
@@ -113,4 +113,4 @@ const page =async () => {
   )
 }
 
-export default page
+export default Page

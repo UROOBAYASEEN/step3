@@ -5,7 +5,7 @@ import RecomdeCar from '../mycomponets/RecomdeCar'
 import SideBar from '../mycomponets/SideBar'
 import { RxHamburgerMenu } from 'react-icons/rx'
 
-const page = () => {
+const Page = () => {
   const [showinsidebar, setshowinsidebar] = useState(false)
   return (
     <div>
@@ -26,4 +26,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
