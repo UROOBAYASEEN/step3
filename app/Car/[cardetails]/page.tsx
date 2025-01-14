@@ -53,7 +53,7 @@ const Page = ({params}:{params:{cardetails:string}}) => {
       console.log(filteringdata)
       setfilterdata(filteringdata)
     }
-  },[alldata])
+  },)
   return (
     <div>
     
