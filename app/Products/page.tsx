@@ -6,7 +6,7 @@ import RecomdeCar from '../mycomponets/RecomdeCar'
 const page = () => {
   return (
     <div>
-        <ProductDetails/> 
+        {/* <ProductDetails/>  */}
         <Popolarcar/>
       <RecomdeCar/>
     </div>

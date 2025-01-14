@@ -72,8 +72,8 @@ const Page = () => {
               <div>
                 <h1>Cart Product</h1>
                 {
-                  cartdata.map((val)=>
-                    <div className="flex justify-evenly  mt-24 border border-black p-2">
+                  cartdata.map((val,ind)=>
+                    <div  key={ind}  className="flex justify-evenly  mt-24 border border-black p-2">
                       <p className='text-2xl font-bold hover:text-3xl'>{val.carname}</p>
                      <Image 
                     src={urlFor(val.carimaage).url()}

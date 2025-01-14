@@ -12,7 +12,11 @@ async function getdata(){
 }
 
 
-const Page =async () => {
+const Page = () => {
+  process.on('uncaughtException', (err) => {
+    console.error('Unhandled Exception:', err);
+})
+
   interface CarDatas {
     carName: string; // Name of the car
     purpose: string; // Purpose of the car
@@ -38,7 +42,7 @@ const Page =async () => {
       localStorage.setItem("carddata",JSON.stringify([]))
     }
   })
-  const sanitydata= await getdata()
+  const sanitydata=  getdata()
   return (
     <div className='bg-gray-200 overflow-x-hidden'>
      
