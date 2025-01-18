@@ -1,5 +1,6 @@
 "use client"
 import ProductDetails from '@/app/mycomponets/ProductDetails'
+import Products from '@/app/mycomponets/Products'
 import { client } from '@/sanity/lib/client'
 import React, { useEffect, useState } from 'react'
 const getdata= async()=>{
@@ -65,6 +66,13 @@ const Page = ({params}:{params:{cardetails:string}}) => {
       )
     }
       </div>}
+      <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3'>
+        {
+          alldata.map((val)=> <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3'>
+            <Products {...val}/>
+          </div>)
+        }
+      </div>
     </div>
   )
 }

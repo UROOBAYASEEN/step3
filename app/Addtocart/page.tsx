@@ -68,12 +68,12 @@ const Page = () => {
 
 
               </div>
-            </div>:<div className='flex justify-center items-center text-center'>
-              <div>
-                <h1>Cart Product</h1>
+            </div>:<div className='flex justify-center items-center text-center h-screen overflow-y-scroll'>
+              <div className=''>
+                <h1 className='font-bold text-2xl mt-5 bg-red-700 text-white'>Cart Product</h1>
                 {
                   cartdata.map((val,ind)=>
-                    <div  key={ind}  className="flex justify-evenly  mt-24 border border-black p-2">
+                    <div  key={ind}  className="flex justify-evenly  mt-10 border border-black p-4 gap-10 ">
                       <p className='text-2xl font-bold hover:text-3xl'>{val.carname}</p>
                      <Image 
                     src={urlFor(val.carimaage).url()}
@@ -87,6 +87,7 @@ const Page = () => {
                 removeitem(val.id)
 
               }}/></p>
+              <button className='px-7 py-3 bg-blue-500 text-white font-bold'> Rent A Car</button>
          
          
 
