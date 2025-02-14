@@ -5,6 +5,10 @@ import Popolarcar from './mycomponets/Popolarcar'
 import RecomdeCar from './mycomponets/RecomdeCar'
 import SideBar from './mycomponets/SideBar'
 import { client } from '@/sanity/lib/client'
+import { json } from 'stream/consumers'
+import Contactus from './mycomponets/Contactus'
+import App from '@/components/Icons'
+import RentalSearch from './mycomponets/HeaderTwo'
 
 async function getdata(){
   const fetchdata=await client.fetch(`*[_type == 'car']  `)
@@ -36,6 +40,26 @@ const Page = () => {
   const [localdata, setlocaldata] = useState<CarDatas[]>([])
   useEffect(()=>{
 
+    if(window != undefined){
+      const localdata=localStorage.getItem("Rentallogin")
+      if(localdata){
+      
+      
+      }
+      else{
+        localStorage.setItem("Rentallogin",'false')
+      }
+
+ 
+      
+     
+    
+      
+  
+      
+   
+      
+    }
     if(window!==undefined){
    
       
@@ -44,15 +68,22 @@ const Page = () => {
   })
   const sanitydata=  getdata()
   return (
-    <div className='bg-gray-200 overflow-x-hidden'>
+    <div className=' overflow-x-hidden'>
      
      <div>
       
      </div>
       < Headerone/>
-      
+    <RentalSearch/>
       
       <Popolarcar/>
+      < App/>
+      <Contactus/>
+
+
+
+
+
       {/* <RecomdeCar/> */}
      
      

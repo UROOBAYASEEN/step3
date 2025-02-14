@@ -7,7 +7,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { TbTransferVertical } from "react-icons/tb";
 
 const Headerone = () => {
-  return<div className=' mt-10 bg-gray-200  overflow-x-hidden '>
+  return<div className=' mt-10   overflow-x-hidden '>
 <div className='flex gap-10 justify-center'>
     <div className=' one w-[640px] py-10 bg-blue-400 rounded-md  relative '>
       <div className='absolute  bottom-0 left-[100px]'>
@@ -41,7 +41,7 @@ const Headerone = () => {
         <button className='bg-blue-800 text-white px-9 py-3 mt-5 ml-5 rounded-md'>Rental Car</button>
     </div>
     </div>
-    <div className=' gap-2 justify-between mx-5  mt-6  md:flex '>
+    {/* <div className=' gap-2 justify-between mx-5  mt-6  md:flex '>
       <div className='  border border-gray-500 bg-white px-5 py-3'>
         <div className='flex items-center gap-2 mt-5 ml-5'><span className='h-2 w-2 bg-blue-700 rounded-full'></span><span>Pick-Up</span></div>
         <div className='flex justify-center gap-1 mt-4'>
@@ -90,7 +90,7 @@ const Headerone = () => {
         </div>
       </div>
       </div>
-    </div>
+    </div> */}
     </div>
    
    

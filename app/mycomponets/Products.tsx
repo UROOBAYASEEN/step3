@@ -18,7 +18,7 @@ const Products = ({carName, carImage,price, length, purpose,id}:{carName:string,
 
   const [white, setwhite] = useState(" text-gray-200 ")
   return (
-    <div className='   mt-10 border bg-white py-5 px-5  w-[300px] rounded-xl '>
+    <div className='   mt-10 border bg-white py-5 px-3  w-[300px] '>
         
         <div className='flex justify-between px-3 items-center text-center ' >
             <h1 className='font-bold text-2xl'>{carName}</h1>
@@ -34,7 +34,7 @@ const Products = ({carName, carImage,price, length, purpose,id}:{carName:string,
         alt='thisisimage'
         height={300}
         width={300}
-        className=''
+         className="object-cover "
         />}
         <div className='flex gap-3 mt-14 text-gray-500'>
             <div className='flex items-center text-center gap-2 '><span><FaCcMastercard /></span><span>{length}L</span></div>
@@ -43,7 +43,7 @@ const Products = ({carName, carImage,price, length, purpose,id}:{carName:string,
        
         </div>
         <div className='flex justify-between mt-14'>
-            <p className=' font-bold'>{price}/Day</p>
+            <p className=' font-bold'>${price}/Day</p>
 
           <Link href={`/Car/${id}`}> <button className='text-white bg-blue-700 px-7 py-4  font-bold'>View Details</button></Link>
         </div>

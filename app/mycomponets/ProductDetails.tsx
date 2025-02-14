@@ -10,6 +10,8 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { urlFor } from '@/sanity/lib/image'
 import { useStateLink } from 'sanity/router'
 import { toast, Toaster } from 'sonner'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation';
 interface imagetype{
     _type: "image";
     asset: {
@@ -19,25 +21,27 @@ interface imagetype{
   };
 const ProductDetails = ({carName,purpose,length,price,carImage,carDescription,id}:{carName:string,purpose:string,length:number,price:string,carImage:imagetype,carDescription:string,id:string}) => {
 
+const router=useRouter()
+
+
+   
     
 
+
+    const addingdata={
+        carname:carName,
+        purpose:purpose,
+        length:length,
+        price:price,
+        carimaage:carImage,
+        carDescription:carDescription,
+        id:id
     
-    
+        }
+
     const dataAddtocart=()=>{
       
         
-    
-    const addingdata={
-    carname:carName,
-    purpose:purpose,
-    length:length,
-    price:price,
-    carimaage:carImage,
-    carDescription:carDescription,
-    id:id
-
-    }
-
     if(window!==undefined){
        
         const storedArray = localStorage.getItem("carddata");
@@ -49,7 +53,8 @@ const ProductDetails = ({carName,purpose,length,price,carImage,carDescription,id
         // Update localStorage with the updated array
         localStorage.setItem("carddata", JSON.stringify(updatedCardData));
     }
-    toast("Product add in Cart")
+   
+    toast.success("Item added to cart!", { position: "top-right"});
   }
     const Reviewdata=[
         {name:"alex bird",
@@ -157,10 +162,12 @@ const ProductDetails = ({carName,purpose,length,price,carImage,carDescription,id
                     <div className='flex'><span className='font-bold text-2xl'>{price}/</span><span>days</span></div>
                
                <div className='flex gap-5'>
-               <div className='bg-blue-700 px-12 py-4 text-white font-bold'>Rent now</div>
-               <div className='bg-blue-700 px-12 py-4 text-white font-bold'onClick={dataAddtocart}> Add To cart</div>
+             
+           <Link href={`/Rentacar/${id}?index=1`}><p className='bg-blue-700 px-12 py-4 text-white font-bold' >Rent now</p></Link>
+                 <div className='bg-blue-700 px-12 py-4 text-white font-bold'onClick={dataAddtocart}> Add To cart</div>
                
-               
+           
+           
                
            
                </div>

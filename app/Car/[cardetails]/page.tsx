@@ -2,7 +2,7 @@
 import ProductDetails from '@/app/mycomponets/ProductDetails'
 import Products from '@/app/mycomponets/Products'
 import { client } from '@/sanity/lib/client'
-import React, { useEffect, useState } from 'react'
+import React, { use, useEffect, useState } from 'react'
 const getdata= async()=>{
     const mydata= await client.fetch(`*[_type == 'car']`).then(data=>{
 return data
@@ -10,9 +10,9 @@ return data
     return mydata
 }
 
-const Page = ({params}:{params:{cardetails:string}}) => {
-  const dynamicnumber=params.cardetails
-
+const Page = ({ params }: { params: Promise<{ cardetails: string }> }) => {
+  const { cardetails } = use(params);
+  const dynamicnumber = cardetails;
 
   interface CarDatas {
     carName: string; // Name of the car
@@ -46,7 +46,7 @@ const Page = ({params}:{params:{cardetails:string}}) => {
    
     
 
-  })
+  },[])
   useEffect(()=>{
 
     if(alldata){
@@ -54,7 +54,7 @@ const Page = ({params}:{params:{cardetails:string}}) => {
       console.log(filteringdata)
       setfilterdata(filteringdata)
     }
-  },)
+  },[alldata,dynamicnumber])
   return (
     <div>
     
@@ -68,7 +68,7 @@ const Page = ({params}:{params:{cardetails:string}}) => {
       </div>}
       <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3'>
         {
-          alldata.map((val)=> <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3'>
+          alldata.map((val,ind)=> <div key={ind} className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-3'>
             <Products {...val}/>
           </div>)
         }

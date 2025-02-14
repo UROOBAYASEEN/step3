@@ -15,7 +15,7 @@ const Page = () => {
   
         <div className=''>
         <Popolarcar/>
-        <RecomdeCar/>
+        {/* <RecomdeCar/> */}
         </div>
 
       </div>

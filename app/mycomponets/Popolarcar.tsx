@@ -119,7 +119,7 @@ console.log(alldatas)
 // },[])
     
   return (
-    <div className=' mt-5 bg-gray-100 overflow-x-hidden'>
+    <div className=' mt-5 overflow-x-hidden'>
         <div className='flex justify-between'>
         <h1 className='mt-10 mx-10 mb-5 text-2xl'>Popular Car</h1>
         <h1 className='mt-10 mx-10 mb-5 text-2xl'>View All</h1>
@@ -138,7 +138,7 @@ alldatas.map((val,ind)=>
 </div>
 
 )}
-<div className='flex items-center justify-center'>
+<div className='flex items-center justify-center text-center'>
   <Link href="/Car"> <p className='mt-10 py-3 px-7 bg-blue-800 text-white font-bold mb-10'>View More Cars</p></Link>
 
 </div>
