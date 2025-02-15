@@ -1,6 +1,6 @@
 "use client"
 import { truncate } from 'node:fs/promises';
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { BiSolidDashboard } from 'react-icons/bi';
 import { CgInsights } from 'react-icons/cg';
 import { FaCarAlt, FaEnvelopeOpenText } from 'react-icons/fa';
@@ -174,7 +174,14 @@ const Page = () => {
    {/* Sidebar */}
    <aside className="hidden md:flex flex-col w-20 bg-gradient-to-b bg-blue-700 text-white items-center py-10 space-y-6 shadow-lg">
     <div className="w-10 h-10 border-black border bg-white text-pink-500 flex items-center justify-center rounded-full shadow-md" onClick={gotosettingpage}>⚙️</div>
-     <div className="w-10 h-10 bg-white text-pink-500 flex items-center justify-center rounded-full shadow-md" onClick={checkorder}>📦</div>
+   
+    <Suspense fallback={<div>Loading...</div>}>
+    
+    <div className="w-10 h-10 bg-white text-pink-500 flex items-center justify-center rounded-full shadow-md" onClick={checkorder}>📦</div>
+   
+    </Suspense>
+    
+    
      <div className="w-10 h-10 bg-white text-pink-500 flex items-center justify-center rounded-full shadow-md">⚡</div>
    </aside>
  

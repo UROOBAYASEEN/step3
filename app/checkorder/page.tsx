@@ -3,10 +3,10 @@
 import { ToastContainer, toast } from 'react-toastify';
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { array } from 'zod'
 
-const Page = () => {
+const Mypage = () => {
    
    
     interface Order {
@@ -23,13 +23,20 @@ const Page = () => {
     const [myorders, setmyorders] = useState<Order[]>()
     const [confirmorder, setconfirmorder] =useState<Order[]>()
     const [pendingorder, setpendingorder] = useState<Order[]>()
+    const [myid,setmyid]=useState("")
+    
     const [falsee, setfalsee] = useState(false)
 
   
   
     const quaryparams=useSearchParams()
-    const myid=quaryparams.get("id")
+    const myids=quaryparams.get("id")
+    
+    
     console.log(myid)
+    useEffect(()=>{
+      setmyid(myids?myids:"")
+    })
   
     useEffect(()=>{
       
@@ -149,6 +156,13 @@ async function completeorder(id:any){
     
   }
 
+  const Page=()=>{
+    <Suspense fallback={<div>Loading...</div>}>
+   
+   <Mypage/>
+    <ToastContainer />
+  </Suspense>
+  }
 
   export default Page
   
