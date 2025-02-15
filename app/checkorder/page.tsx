@@ -36,7 +36,7 @@ const Mypage = () => {
     console.log(myid)
     useEffect(()=>{
       setmyid(myids?myids:"")
-    })
+    },[myids])
   
     useEffect(()=>{
       

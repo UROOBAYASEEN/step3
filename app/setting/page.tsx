@@ -4,7 +4,7 @@
 import bcrypt from "bcryptjs";
 
 // import * as React from "react"
-import React, { useState } from "react"
+import React, { Suspense, useState } from "react"
 
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
  
@@ -23,7 +23,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 
 
 
-const Page = () => {
+const SettingpagePage = () => {
   const [firstname, setfirstname] = React.useState("")
   const [lastname, setlastname] = React.useState("")
   const [emaiil, setemaiil] = useState("")
@@ -306,6 +306,11 @@ const Page = () => {
 
   </div>
   )
+}
+const Page=()=>{
+  <Suspense fallback={<div>Loading...</div>}>
+    <SettingpagePage/>
+  </Suspense>
 }
 
 export default Page

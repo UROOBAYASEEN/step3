@@ -35,7 +35,8 @@ const Stepone = ({getdate,gettime,totalperson,startingplace,destination,totalhou
   const [getsource, setgetsource] = useState<[number,number]>([25.78497, 25.78497])
   const [Destination, setDestination] = useState<[number,number]>([26.58761, 26.58761])
   const [Totalhour, setTotalhour] = useState<number>(1)
-  const Map=useMemo(()=>dynamic(()=>import("@/components/Map"),{ ssr: false }),[getsource,Destination])
+  // const Map=useMemo(()=>dynamic(()=>import("@/components/Map"),{ ssr: false }),[getsource,Destination])
+ 
   useEffect(()=>{
   
     
@@ -62,7 +63,7 @@ const Stepone = ({getdate,gettime,totalperson,startingplace,destination,totalhou
      </div>
      <div>
     
-    {
+    {/* {
       getsource && Destination && <div className='mt-10'>
        
      
@@ -71,10 +72,7 @@ const Stepone = ({getdate,gettime,totalperson,startingplace,destination,totalhou
      
      
       </div>
-      
-
-      
-    }
+    } */}
      </div>
     </div>
   )
