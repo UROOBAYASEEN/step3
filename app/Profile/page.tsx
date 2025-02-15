@@ -38,6 +38,7 @@ const Page = () => {
    const [Setting, setSetting] = useState(false)
    const [HelpCenter, setHelpcenter] = useState(false)
    interface User {
+    _id:string,
     Firstname: string;
     Lastname: string;
     passward: string;
@@ -155,11 +156,17 @@ const Page = () => {
     }
     
     function  gotosettingpage(){
-      router.push(`/setting?id=${mydata?._id}`)
+
+      if(mydata){
+        router.push(`/setting?id=${mydata._id}`)
+      }
 
     }
     function checkorder(){
-      router.push(`/checkorder?id=${mydata?._id}`)
+     
+      if(mydata){
+        router.push(`/checkorder?id=${mydata._id}`)
+      }
     }
   return (
    
