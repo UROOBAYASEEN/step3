@@ -119,4 +119,4 @@ Add more payment options.
 Implement a review system for cars.
 
 Include analytics and reporting for admin users.
-Thanks to the developers of Sanity, Tailwind CSS, Stripe, and other technologies used in this project.
+Thanks to the developers of Sanity, Tailwind CSS, Stripe, and other technologies used in this project.# checkingone
