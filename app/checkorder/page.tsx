@@ -157,7 +157,7 @@ async function completeorder(id:any){
   }
 
   const Page=()=>{
-    <Suspense fallback={<div>Loading...</div>}>
+    return <Suspense fallback={<div>Loading...</div>}>
    
    <Mypage/>
     <ToastContainer />
