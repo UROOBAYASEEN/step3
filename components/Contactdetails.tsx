@@ -32,7 +32,7 @@ const Contactdetails = () => {
       const localdata=localStorage.getItem("Rentallogin")
       if(localdata != "false"){
         async function gettingdata(){
-            let data=await fetch("http://localhost:3000/api/users/signin")
+            let data=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`)
             data=await data.json()
             console.log(data)
             if(Array.isArray(data)){

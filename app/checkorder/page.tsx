@@ -59,7 +59,7 @@ const Mypage = () => {
         myfun()
     },[myid])
     useEffect(()=>{
-      const confirmorder=myorders?.filter((val)=>val.orderposition)
+      const confirmorder=myorders?.filter((val)=>val.orderposition==true)
       console.log("kese are confirm order",confirmorder)
       setconfirmorder(confirmorder)
       const pendingorder=myorders?.filter((val)=>val.orderposition==false)
