@@ -37,7 +37,8 @@ export async function PUT(req:NextRequest){
         }
 
         const payloat=await req.json()
-        const data=await bookingmodel.findOneAndUpdate(payloat)
+        console.log("this is payload",payloat)
+        const data=await bookingmodel.findOneAndUpdate({_id:userId },payloat)
 return NextResponse.json({status:data})
 
 }catch(err){

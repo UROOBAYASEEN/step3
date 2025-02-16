@@ -73,6 +73,25 @@ const router=useRouter()
                 
                 
     ]
+     function Rentnowfunction(){
+        if(typeof window != "undefined"){
+            const islogin=localStorage.getItem("Rentallogin")
+            if(islogin){
+              
+                if(islogin=="false"){
+                    alert("PLease LOgin First")
+                    router.push("/signin")
+                    // router.push(`Rentacar/${id}?index=1`)
+                }
+                else{
+                    router.push(`/Rentacar/${id}?index=1`)
+                }}
+            else{
+                alert("user is not login")
+            }
+        }
+        
+    }
   return (
     <div className=' my-5'>
         <div className='  gap-5 justify-end md:flex'>
@@ -163,7 +182,7 @@ const router=useRouter()
                
                <div className='flex gap-5'>
              
-           <Link href={`/Rentacar/${id}?index=1`}><p className='bg-blue-700 px-12 py-4 text-white font-bold' >Rent now</p></Link>
+           <p className='bg-blue-700 px-12 py-4 text-white font-bold'  onClick={Rentnowfunction}>Rent now</p>
                  <div className='bg-blue-700 px-12 py-4 text-white font-bold'onClick={dataAddtocart}> Add To cart</div>
                
            

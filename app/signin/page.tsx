@@ -192,11 +192,15 @@ if(filterdata[0].verifyToken==Entervarificationid){
         console.log("user is verified")
         if(window !=undefined){
           localStorage.setItem("Rentallogin",mydata[0]._id)
-          alert("data is send to local storage")
+         
+          toast.success("Congratulation Your Are Login")
           router.push("/")
         
           
         }
+      }
+      else{
+        toast.error("This Emale is not register")
       }
 
     }
@@ -389,14 +393,15 @@ if(filterdata[0].verifyToken==Entervarificationid){
     </div>
     <div className={` forgot ${forgot ==false && "hidden"}`}>
      
-      <div className="forgot">
-       <h1>Forget Passward</h1>
+      <div className="forgot   ">
+       <h1 className="text-2xl font-bold">Forget Passward</h1>
      
      <form>
-     <input type="email" placeholder="Enter Email" value={fogetEmale} onChange={(e:any)=>{
+     <input type="email" className="border-2 border-black mb-10 mt-4 py-3 " placeholder="Enter Email" value={fogetEmale} onChange={(e:any)=>{
       setForgetEmale(e.target.value)
      }}/>
-     <button type="submit" onClick={forgetpassward}>Get Passward</button>
+     <br/>
+     <button type="submit" className="bg-blue-700 py-3 px-7 hover:bg-blue-900 text-white font-bold " onClick={forgetpassward}>Get Passward</button>
      </form>
        
       
@@ -405,8 +410,8 @@ if(filterdata[0].verifyToken==Entervarificationid){
      </div>
      <div className={` signup ${signup==false && "hidden"}`}>
     
-       <div className="border border-black py-3 px-3">
-         <h1 className="font-bold text-2xl mb-6 text-center uppercase "> Sign In</h1>
+       <div className=" shadow-lg shadow-black-500 border-black  py-10 border-2 px-10">
+         <h1 className="font-bold text-3xl mb-6  uppercase text-start   "> Sign In</h1>
          <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <div className=" one md:flex justify-between gap-3 text-2xl">
@@ -416,9 +421,9 @@ if(filterdata[0].verifyToken==Entervarificationid){
           name="FirstName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>First Name</FormLabel>
+              <FormLabel className="uppercase font-bold">First Name</FormLabel>
               <FormControl>
-                <Input placeholder="Firstname" {...field}  className="border border-black text-center font-bold  text-blue-700"/>
+                <Input placeholder="Firstname" {...field}  className="border border-black text-center font-bold px-4 text-2xl   text-blue-700"/>
               </FormControl>
               <FormDescription>
                 Enter your First Name
@@ -437,7 +442,7 @@ if(filterdata[0].verifyToken==Entervarificationid){
           name="LastName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Last Name</FormLabel>
+              <FormLabel className="uppercase font-bold">Last Name</FormLabel>
               <FormControl>
                 <Input placeholder="firstName" {...field} className="border border-black text-center font-bold text-blue-700"/>
               </FormControl>
@@ -460,7 +465,7 @@ if(filterdata[0].verifyToken==Entervarificationid){
           name="userEmail"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>UserEmale</FormLabel>
+              <FormLabel className="uppercase font-bold">UserEmale</FormLabel>
               <FormControl>
                 <Input placeholder="useremale" {...field}  className="border border-black text-center font-bold  text-blue-700"/>
               </FormControl>
@@ -479,7 +484,7 @@ if(filterdata[0].verifyToken==Entervarificationid){
           name="passward"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Passward</FormLabel>
+              <FormLabel className="uppercase font-bold">Passward</FormLabel>
               <FormControl>
                 <Input placeholder="Passward" {...field}  className="border border-black text-center font-bold  text-blue-700"/>
               </FormControl>
@@ -503,7 +508,7 @@ if(filterdata[0].verifyToken==Entervarificationid){
      
      
      
-          <Button type="submit" className="bg-blue-700 text-white">Submit</Button>
+          <Button type="submit" className="bg-blue-700 text-white uppercase font-bold">Submit</Button>
         {/* <Button type="submit">Submit</Button> */}<AlertDialog>
         <AlertDialogTrigger>
         

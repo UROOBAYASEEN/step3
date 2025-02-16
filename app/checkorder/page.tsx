@@ -86,7 +86,7 @@ async function completeorder(id:any){
     method:"PUT",
     body:JSON.stringify({orderposition:true})
   })
-  completeorder=await completeorder.json()
+  let DATA=await completeorder.json()
   toast.success("Order Complere sucessfully")
   window.location.reload()
 
@@ -128,9 +128,9 @@ async function completeorder(id:any){
     {
       confirmorder.reverse().map((val,ind)=>
 
-      <div className='flex justify-evenly  'key={ind}>
+      <div className='flex justify-evenly  mb-7 'key={ind}>
         <h1 className='font-bold'>Order id:{val._id}</h1>
-        <h1 className='font-bold'>Total Price {val.Totalprice}</h1>
+        <h1 className='font-bold'>Total Price ${val.Totalprice}</h1>
         <h1 className='font-bold'> Starting Place:{val.startingplace}</h1>
         <h1 className='font-bold'>Destination :{val.destination}</h1>
         <h1 className='font-bold'>Status : Sucess</h1>
