@@ -43,7 +43,7 @@ useEffect(()=>{
     const getuserid=localStorage.getItem("Rentallogin")
     if(getuserid !== "false"){
     async function gettingdata(){
-      let mydata=await fetch("http://localhost:3000/api/users/signin")
+      let mydata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`)
       mydata=await mydata.json()
   if(Array.isArray(mydata)){
     const filterdata=mydata.filter((val)=>val._id==getuserid)

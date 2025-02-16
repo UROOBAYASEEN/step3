@@ -134,7 +134,7 @@ const formSchema = z.object({
   async function onSubmit(values: z.infer<typeof formSchema>) {
   setshownpasswrdinterface(true)
     setshowalertdialog(true)
-    let userlogin=await fetch("http://localhost:3000/api/users/signin",{
+    let userlogin=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`,{
       method:"POST",
       body:JSON.stringify({Firstname:values.FirstName,Lastname:values.LastName,Emale:values.userEmail,passward:values.passward})
     })
@@ -145,7 +145,7 @@ const formSchema = z.object({
    
   }
    async function verifyByvarificationCode(){
-    let alldata=await fetch("http://localhost:3000/api/users/signin")
+    let alldata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`)
     alldata= await alldata.json()
 
     if(Array.isArray(alldata)){
@@ -156,7 +156,7 @@ const formSchema = z.object({
   console.log(filterdata)
 if(filterdata[0].verifyToken==Entervarificationid){
   console.log("user verifeid")
-  let verifyaccount=await fetch(`http://localhost:3000/api/users/signin/${userid}`,{
+  let verifyaccount=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin/${userid}`,{
     
     method:"PUT",
     body:JSON.stringify({Isverified:true})
@@ -181,7 +181,7 @@ if(filterdata[0].verifyToken==Entervarificationid){
    }
    async function loginfunctionality(e: any) {
     e.preventDefault(); // Prevent default form submission behavior
-    let  alldata=await fetch("http://localhost:3000/api/users/signin")
+    let  alldata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`)
     alldata=await alldata.json()
   
     
@@ -310,13 +310,13 @@ if(filterdata[0].verifyToken==Entervarificationid){
     
  async function forgetpassward(event:any){
   event.preventDefault()
-  let  alluser=await fetch("http://localhost:3000/api/users/signin")
+  let  alluser=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`)
   alluser=await alluser.json()
   if(Array.isArray(alluser)){
     const mydata=alluser.filter((val)=>val.Emale==fogetEmale)
     if(mydata[0]){
       setforgetuserid(mydata[0]._id)
-        let updatedata=await fetch(`http://localhost:3000/api/users/signin/${mydata[0]._id}`,{
+        let updatedata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin/${mydata[0]._id}`,{
             method:"PUT",
             body:JSON.stringify({passward:fogetEmale })
           })
@@ -325,7 +325,7 @@ if(filterdata[0].verifyToken==Entervarificationid){
       
         }
 
-      let sendPassward=await fetch("http://localhost:3000/api/forgetpassward",{
+      let sendPassward=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/forgetpassward`,{
         method:"POST",
         body:JSON.stringify({Emale:fogetEmale})
       })

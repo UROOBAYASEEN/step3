@@ -41,7 +41,7 @@ const Mypage = () => {
     useEffect(()=>{
       
         const myfun=async()=>{
-            let mybookingdata=await fetch("http://localhost:3000/api/getorder")
+            let mybookingdata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/getorder`)
             mybookingdata=await mybookingdata.json()
             console.log("this is my booking data",mybookingdata)
          
@@ -72,7 +72,7 @@ const Mypage = () => {
     },[myorders])
 
 async function cencelorder(id:any){
-  let cencelorder=await fetch(`http://localhost:3000/api/getorder/${id}`,{
+  let cencelorder=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/getorder/${id}`,{
     method:"DELETE"
   })
   let datas=await cencelorder.json()
@@ -82,7 +82,7 @@ async function cencelorder(id:any){
 
 }
 async function completeorder(id:any){
-  let completeorder=await fetch(`http://localhost:3000/api/getorder/${id}`,{
+  let completeorder=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/getorder/${id}`,{
     method:"PUT",
     body:JSON.stringify({orderposition:true})
   })

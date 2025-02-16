@@ -36,7 +36,7 @@ const Contactus = () => {
     ]
   async  function sendmessage(e:any){
         e.preventDefault()
-       let senddata=await fetch("http://localhost:3000/api/users/contactus",{
+       let senddata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/contactus`,{
         method:'POST',
         body:JSON.stringify({
             fullName:name,

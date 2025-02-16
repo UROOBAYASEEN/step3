@@ -34,7 +34,7 @@ const SettingpagePage = () => {
   console.log(gettingid)
   const router=useRouter()
   const sendimage=async()=>{
-    let  updateimage=await fetch(`http://localhost:3000/api/users/signin/${gettingid}`,{
+    let  updateimage=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin/${gettingid}`,{
       method:"PUT",
       body:JSON.stringify({Profilepic:profileimage})
     })
@@ -53,7 +53,7 @@ const SettingpagePage = () => {
   }
   }
   async function updatename(){
-    let updatedata=await fetch(`http://localhost:3000/api/users/signin/${gettingid}`,{
+    let updatedata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin/${gettingid}`,{
       method:"PUT",
       body:JSON.stringify({Firstname:firstname,Lastname:lastname})
     })
@@ -63,7 +63,7 @@ const SettingpagePage = () => {
     
   }
   async function updatEmail(){
-    let updatedata=await fetch(`http://localhost:3000/api/users/signin/${gettingid}`,{
+    let updatedata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin/${gettingid}`,{
       method:"PUT",
       body:JSON.stringify({Emale:emaiil})
     })
@@ -73,7 +73,7 @@ const SettingpagePage = () => {
   }
   async function updatpassward(){
     const hashedpassward= await bcrypt.hash(passward,10)
-    let updatedata=await fetch(`http://localhost:3000/api/users/signin/${gettingid}`,{
+    let updatedata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin/${gettingid}`,{
       method:"PUT",
       body:JSON.stringify({passward: hashedpassward})
     })
@@ -85,7 +85,7 @@ const SettingpagePage = () => {
     localStorage.clear()
   }
   async function  deleteaccount(){
-     let updatedata=await fetch(`http://localhost:3000/api/users/signin`,{
+     let updatedata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`,{
       method:"DELETE",
       body:JSON.stringify({_id:gettingid})
      })
@@ -99,6 +99,8 @@ const SettingpagePage = () => {
   return (
     <div  className="flex justify-start items-center mx-5  ">
       <div className="mt-10">
+    
+    
      
      <div className="mt-5 underline  hover:text-red-600 ">
        <AlertDialog>
@@ -308,9 +310,10 @@ const SettingpagePage = () => {
   )
 }
 const Page=()=>{
-  <Suspense fallback={<div>Loading...</div>}>
-    <SettingpagePage/>
-  </Suspense>
+ 
+ return  <Suspense fallback={<div>Loading...</div>}>
+ <SettingpagePage/>
+</Suspense>
 }
 
 export default Page

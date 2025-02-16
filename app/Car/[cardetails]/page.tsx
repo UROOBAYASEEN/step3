@@ -15,20 +15,20 @@ const Page = ({ params }: { params: Promise<{ cardetails: string }> }) => {
   const dynamicnumber = cardetails;
 
   interface CarDatas {
-    carName: string; // Name of the car
-    purpose: string; // Purpose of the car
-    length: number; // Length of the car
-    price: string; // Rental price of the car
+    carName: string; 
+    purpose: string; 
+    length: number; 
+    price: string; 
     carImage: {
         _type: "image";
         asset: {
           _type: "reference";
-          _ref: string; // Reference ID of the image asset
+          _ref: string; 
         };
       };
     
-    carDescription: string; // Detailed description of the car
-    id: string; // Unique ID for the car
+    carDescription: string; 
+    id: string; 
   }
   
   const [alldata, setalldata] = useState<CarDatas[]>([])

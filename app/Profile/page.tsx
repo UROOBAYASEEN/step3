@@ -83,7 +83,7 @@ const Page = () => {
             const localdata=localStorage.getItem("Rentallogin")
             if(localdata!= "false"){
                 async function gettingdata(){
-                    let data=await fetch("http://localhost:3000/api/users/signin")
+                    let data=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`)
                     data=await data.json()
                     if(Array.isArray(data)){
                         const mydata0=data.filter((val)=>val._id==localdata)
