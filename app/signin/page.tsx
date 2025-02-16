@@ -106,7 +106,7 @@ const formSchema = z.object({
   }
   useEffect(()=>{
     async function alldataget(){
-      let mydata=await fetch("http://localhost:3000/api/users/signin")
+      let mydata=await fetch(`${process.env.NEXT_PUBLIC_URL}/api/users/signin`)
       mydata=await mydata.json()
      if(Array.isArray(mydata)){
       const profiledata=mydata.filter((val)=>val._id==userid)
